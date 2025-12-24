@@ -1,0 +1,1258 @@
+/* ============================================
+   HAVARD UNIVERSITY - PRESTIGIOUS STYLING
+   Est. 2014 - The Finest in Kicker Excellence
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    --havard-crimson: #8B0000;
+    --havard-gold: #C9A227;
+    --havard-cream: #F5F0E6;
+    --havard-dark: #1A1A1A;
+    --havard-navy: #1E3A5F;
+    --text-dark: #2C2C2C;
+    --text-light: #F5F5F5;
+    --accent-green: #2E7D32;
+    --accent-red: #C62828;
+    --border-gold: #D4AF37;
+    --shadow-elegant: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--havard-cream);
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(201, 162, 39, 0.03) 0%, transparent 50%);
+}
+
+/* ============================================
+   TOP BANNER
+   ============================================ */
+.top-banner {
+    background: linear-gradient(135deg, var(--havard-crimson) 0%, #5C0000 100%);
+    color: var(--havard-gold);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.latin-motto {
+    opacity: 0.9;
+}
+
+/* ============================================
+   MAIN HEADER
+   ============================================ */
+.main-header {
+    background: linear-gradient(180deg, var(--havard-cream) 0%, #EDE8DC 100%);
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    border-bottom: 3px solid var(--havard-crimson);
+    position: relative;
+}
+
+.main-header::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: var(--havard-gold);
+}
+
+/* Crest */
+.crest-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.crest {
+    position: relative;
+    width: 120px;
+    height: 150px;
+}
+
+.crest-shield {
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(180deg, var(--havard-crimson) 0%, #5C0000 100%);
+    border: 4px solid var(--havard-gold);
+    border-radius: 0 0 50px 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: var(--shadow-elegant);
+}
+
+.crest-top {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--havard-crimson) 0%, #6B0000 100%);
+}
+
+.football-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+}
+
+.crest-bottom {
+    flex: 1;
+    background: var(--havard-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crest-year {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--havard-crimson);
+    letter-spacing: 2px;
+}
+
+.crest-ribbon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--havard-crimson);
+    color: var(--havard-gold);
+    padding: 0.3rem 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border: 2px solid var(--havard-gold);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.university-name {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--havard-crimson);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.university-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--havard-navy);
+    margin-bottom: 0.5rem;
+}
+
+.founding {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 0.95rem;
+    color: #666;
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.main-nav {
+    background: var(--havard-dark);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--havard-cream);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    background: var(--havard-crimson);
+    color: var(--havard-gold);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--havard-gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.main-nav a:hover::after {
+    width: 80%;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    background:
+        linear-gradient(rgba(139, 0, 0, 0.85), rgba(26, 26, 26, 0.9)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" x="50" font-size="50" text-anchor="middle" fill="rgba(255,255,255,0.03)">🏈</text></svg>');
+    background-size: cover, 100px 100px;
+    color: var(--text-light);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    border-left: 4px solid var(--havard-gold);
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.hero-quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    color: var(--havard-gold);
+    font-family: 'IM Fell English SC', serif;
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: var(--havard-crimson);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ornament {
+    font-size: 1.5rem;
+    color: var(--havard-gold);
+}
+
+.content-box {
+    background: white;
+    padding: 3rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow-elegant);
+    border-top: 4px solid var(--havard-crimson);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.drop-cap::first-letter {
+    font-size: 4rem;
+    float: left;
+    line-height: 1;
+    padding-right: 0.5rem;
+    color: var(--havard-crimson);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about-section p {
+    margin-bottom: 1.5rem;
+}
+
+.founding-principles {
+    background: linear-gradient(135deg, #FDF9F3 0%, #F5F0E6 100%);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid var(--havard-gold);
+    border-radius: 0 4px 4px 0;
+}
+
+.founding-principles h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-crimson);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.founding-principles ul {
+    list-style: none;
+}
+
+.founding-principles li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.founding-principles li strong {
+    color: var(--havard-crimson);
+    margin-right: 0.5rem;
+}
+
+.note {
+    font-size: 0.95rem;
+    color: #666;
+    padding: 1rem;
+    background: #F9F9F9;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+/* ============================================
+   SCORING SECTION
+   ============================================ */
+.scoring-section .content-box {
+    border-top-color: var(--havard-gold);
+}
+
+.scoring-tables {
+    display: grid;
+    gap: 2rem;
+}
+
+.scoring-category {
+    background: #FAFAFA;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.scoring-category h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-navy);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.scoring-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.scoring-table th,
+.scoring-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.scoring-table th {
+    background: var(--havard-dark);
+    color: var(--havard-cream);
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.scoring-table th:first-child {
+    border-radius: 4px 0 0 0;
+}
+
+.scoring-table th:last-child {
+    border-radius: 0 4px 0 0;
+}
+
+.scoring-table tbody tr:hover {
+    background: #F5F5F5;
+}
+
+.points {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.points.positive {
+    color: var(--accent-green);
+}
+
+.points.negative {
+    color: var(--accent-red);
+}
+
+.highlight-row {
+    background: linear-gradient(90deg, rgba(46, 125, 50, 0.1) 0%, transparent 100%) !important;
+}
+
+.mega-highlight {
+    background: linear-gradient(90deg, rgba(201, 162, 39, 0.2) 0%, rgba(201, 162, 39, 0.1) 100%) !important;
+}
+
+.danger-row {
+    background: linear-gradient(90deg, rgba(198, 40, 40, 0.1) 0%, transparent 100%) !important;
+}
+
+.scoring-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--accent-red);
+    font-weight: 600;
+}
+
+.scoring-summary {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--havard-crimson) 0%, #5C0000 100%);
+    color: white;
+    border-radius: 4px;
+}
+
+.scoring-summary h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-gold);
+    margin-bottom: 1rem;
+}
+
+.scoring-summary p {
+    margin-bottom: 0.75rem;
+}
+
+.scoring-summary strong {
+    color: var(--havard-gold);
+}
+
+/* ============================================
+   HALL OF FAME
+   ============================================ */
+.hof-section .content-box {
+    border-top-color: var(--havard-gold);
+}
+
+.champions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+}
+
+.champions-table th,
+.champions-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.champions-table th {
+    background: linear-gradient(135deg, var(--havard-crimson) 0%, #5C0000 100%);
+    color: var(--havard-cream);
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.champions-table .year {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--havard-navy);
+    font-size: 1.1rem;
+}
+
+.champions-table .champion {
+    font-weight: 700;
+    color: var(--havard-crimson);
+    background: linear-gradient(90deg, rgba(201, 162, 39, 0.15) 0%, transparent 100%);
+}
+
+.champions-table tbody tr:hover {
+    background: #F9F9F9;
+}
+
+/* Dynasty Section */
+.dynasty-section {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 100%);
+    padding: 2.5rem;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.dynasty-section h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-gold);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+}
+
+.dynasty-highlight {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .dynasty-highlight {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dynasty-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat {
+    background: rgba(201, 162, 39, 0.1);
+    border: 1px solid var(--havard-gold);
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--havard-gold);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #AAA;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.dynasty-history p {
+    margin-bottom: 1rem;
+    color: #CCC;
+}
+
+.dynasty-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.dynasty-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.dynasty-list .place {
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.dynasty-list .gold { color: #FFD700; }
+.dynasty-list .silver { color: #C0C0C0; }
+.dynasty-list .bronze { color: #CD7F32; }
+
+.dynasty-quote {
+    font-style: italic;
+    color: var(--havard-gold) !important;
+    font-size: 1.1rem;
+    margin-top: 1.5rem !important;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+}
+
+/* Notable Teams */
+.notable-teams h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-crimson);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-card {
+    background: #FAFAFA;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--havard-crimson);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.team-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--havard-navy);
+    margin-bottom: 0.25rem;
+}
+
+.team-titles {
+    font-size: 0.85rem;
+    color: var(--havard-gold);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background: var(--havard-crimson);
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+}
+
+.team-card p:last-child {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   LEGENDS SECTION
+   ============================================ */
+.legends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.legend-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-elegant);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.legend-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.legend-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.legend-card.goat {
+    border-top: 4px solid #FFD700;
+}
+.legend-card.goat .legend-badge {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1A1A1A;
+}
+
+.legend-card.elite {
+    border-top: 4px solid var(--havard-crimson);
+}
+.legend-card.elite .legend-badge {
+    background: var(--havard-crimson);
+    color: white;
+}
+
+.legend-card.chaos {
+    border-top: 4px solid #FF6B6B;
+}
+.legend-card.chaos .legend-badge {
+    background: linear-gradient(135deg, #FF6B6B, #C62828);
+    color: white;
+}
+
+.legend-card.specialist {
+    border-top: 4px solid var(--havard-navy);
+}
+.legend-card.specialist .legend-badge {
+    background: var(--havard-navy);
+    color: white;
+}
+
+.legend-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--havard-dark);
+    padding: 1.5rem 1.5rem 0;
+}
+
+.legend-position {
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.25rem 1.5rem;
+}
+
+.legend-description {
+    padding: 1rem 1.5rem;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.legend-stats {
+    background: #F5F5F5;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.legend-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.honorable-mentions {
+    background: #FAFAFA;
+    padding: 2rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--havard-gold);
+}
+
+.honorable-mentions h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-crimson);
+    margin-bottom: 1rem;
+}
+
+.honorable-mentions ul {
+    list-style: none;
+}
+
+.honorable-mentions li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.honorable-mentions li:last-child {
+    border-bottom: none;
+}
+
+.honorable-mentions strong {
+    color: var(--havard-navy);
+}
+
+/* ============================================
+   DRAFT SECTION
+   ============================================ */
+.draft-section .content-box {
+    border-top-color: var(--havard-navy);
+}
+
+.draft-year {
+    margin-bottom: 3rem;
+}
+
+.draft-year h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-crimson);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.draft-note {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.draft-rounds {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.draft-round {
+    background: #FAFAFA;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.draft-round h4 {
+    background: var(--havard-navy);
+    color: var(--havard-cream);
+    padding: 0.75rem 1rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+}
+
+.draft-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.draft-table th,
+.draft-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.draft-table th {
+    background: #2C2C2C;
+    color: #CCC;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.draft-table tbody tr:hover {
+    background: white;
+}
+
+.draft-table a {
+    color: var(--havard-navy);
+}
+
+.fine {
+    color: var(--accent-red);
+    font-weight: 600;
+}
+
+.draft-fine-summary {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(198, 40, 40, 0.1) 0%, rgba(198, 40, 40, 0.05) 100%);
+    border-left: 4px solid var(--accent-red);
+    border-radius: 0 4px 4px 0;
+}
+
+.draft-fine-summary h4 {
+    color: var(--accent-red);
+    margin-bottom: 0.5rem;
+    font-family: 'Cinzel', serif;
+}
+
+/* Draft Details/Summary */
+.draft-details {
+    margin: 1rem 0;
+}
+
+.draft-details summary {
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    background: var(--havard-navy);
+    color: var(--havard-cream);
+    border-radius: 4px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.draft-details summary:hover {
+    background: var(--havard-crimson);
+}
+
+.draft-details[open] summary {
+    border-radius: 4px 4px 0 0;
+    background: var(--havard-crimson);
+}
+
+.draft-highlight {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, rgba(201, 162, 39, 0.05) 100%);
+    border-left: 4px solid var(--havard-gold);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+}
+
+.draft-highlight strong {
+    color: var(--havard-crimson);
+}
+
+.ascii-art {
+    background: #1A1A1A;
+    color: #00FF00;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    overflow-x: auto;
+    margin-top: 0.5rem;
+    white-space: pre;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.main-footer {
+    background: linear-gradient(135deg, var(--havard-dark) 0%, #0D0D0D 100%);
+    color: var(--havard-cream);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-crest {
+    margin-bottom: 1.5rem;
+}
+
+.mini-crest {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: var(--havard-crimson);
+    border: 3px solid var(--havard-gold);
+    border-radius: 50%;
+    line-height: 54px;
+    font-size: 1.5rem;
+}
+
+.footer-motto {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.2rem;
+    color: var(--havard-gold);
+    letter-spacing: 3px;
+    margin-bottom: 0.25rem;
+}
+
+.footer-translation {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-years {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-years span {
+    color: var(--havard-gold);
+}
+
+.footer-years .separator {
+    margin: 0 0.5rem;
+    color: #555;
+}
+
+.footer-note {
+    font-size: 0.95rem;
+    color: #AAA;
+    margin-bottom: 1rem;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .university-name {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    .main-nav a {
+        padding: 0.75rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .hero-quote {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .content-box {
+        padding: 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .scoring-table th,
+    .scoring-table td,
+    .draft-table th,
+    .draft-table td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .champions-table {
+        font-size: 0.85rem;
+    }
+
+    .champions-table th,
+    .champions-table td {
+        padding: 0.5rem;
+    }
+
+    .legends-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   ACADEMIC INTEGRITY SECTION
+   ============================================ */
+.integrity-section .content-box {
+    border-top-color: #333;
+}
+
+.expulsion-case {
+    margin-bottom: 2rem;
+}
+
+.expulsion-case h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-crimson);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.expulsion-case > p {
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.official-letter {
+    background: white;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid #DDD;
+    position: relative;
+}
+
+.official-letter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 28px,
+            rgba(0, 0, 0, 0.02) 28px,
+            rgba(0, 0, 0, 0.02) 29px
+        );
+    pointer-events: none;
+}
+
+.letter-header {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #EEE;
+}
+
+.letter-crest {
+    display: inline-block;
+}
+
+.letter-crest span {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.letter-crest p {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.letter-body {
+    padding: 2rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.letter-greeting {
+    margin-bottom: 1.5rem;
+}
+
+.letter-body p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.letter-body strong {
+    color: var(--havard-crimson);
+}
+
+.letter-closing {
+    margin-top: 2rem !important;
+    text-align: left !important;
+}
+
+.expulsion-note {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.05) 0%, rgba(139, 0, 0, 0.02) 100%);
+    border-left: 4px solid var(--havard-crimson);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.expulsion-note strong {
+    color: var(--havard-crimson);
+}
+
+.integrity-principles {
+    background: #1A1A1A;
+    padding: 2rem;
+    border-radius: 4px;
+    color: white;
+    margin-top: 2rem;
+}
+
+.integrity-principles h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--havard-gold);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.integrity-principles ul {
+    list-style: none;
+}
+
+.integrity-principles li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #333;
+    font-size: 1rem;
+}
+
+.integrity-principles li:last-child {
+    border-bottom: none;
+    color: var(--accent-red);
+}
+
+.integrity-principles li strong {
+    color: var(--havard-gold);
+    margin-right: 0.5rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth scrolling highlight */
+:target {
+    scroll-margin-top: 80px;
+}
+
+:target .content-box {
+    animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+    0% { box-shadow: 0 0 0 4px var(--havard-gold); }
+    100% { box-shadow: var(--shadow-elegant); }
+}
