@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                obs.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -163,6 +164,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Pre-define Konami code animations once (no per-activation style leaks)
+    const konamiStyle = document.createElement('style');
+    konamiStyle.textContent = `
+        @keyframes fadeOut {
+            to { opacity: 0; }
+        }
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(var(--confetti-rotation));
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(konamiStyle);
+
     function activateHavardMode() {
         document.body.style.transition = 'all 0.5s ease';
 
@@ -196,15 +212,6 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => this.remove(), 300);
         });
 
-        // Add fadeOut animation
-        const fadeOutStyle = document.createElement('style');
-        fadeOutStyle.textContent = `
-            @keyframes fadeOut {
-                to { opacity: 0; }
-            }
-        `;
-        document.head.appendChild(fadeOutStyle);
-
         document.body.appendChild(overlay);
 
         // Confetti effect
@@ -217,25 +224,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const confetti = document.createElement('div');
         const emojis = ['🏈', '⭐', '🏆', '👑', '🎉'];
         confetti.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        const rotation = Math.floor(Math.random() * 720) + 'deg';
+        const duration = (Math.random() * 3 + 2).toFixed(2);
         confetti.style.cssText = `
             position: absolute;
             top: -20px;
             left: ${Math.random() * 100}%;
             font-size: ${Math.random() * 20 + 10}px;
-            animation: fall ${Math.random() * 3 + 2}s linear forwards;
+            --confetti-rotation: ${rotation};
+            animation: confetti-fall ${duration}s linear forwards;
             opacity: ${Math.random() * 0.5 + 0.5};
         `;
-
-        const fallStyle = document.createElement('style');
-        fallStyle.textContent = `
-            @keyframes fall {
-                to {
-                    transform: translateY(100vh) rotate(${Math.random() * 720}deg);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(fallStyle);
 
         container.appendChild(confetti);
     }

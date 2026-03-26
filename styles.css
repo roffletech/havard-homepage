@@ -212,7 +212,7 @@ body {
     font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main-nav a:hover {
@@ -228,7 +228,7 @@ body {
     width: 0;
     height: 2px;
     background: var(--havard-gold);
-    transition: all 0.3s ease;
+    transition: width 0.3s ease;
     transform: translateX(-50%);
 }
 
@@ -1032,6 +1032,12 @@ body {
 /* ============================================
    RESPONSIVE
    ============================================ */
+/* Table overflow wrappers for mobile */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 768px) {
     .university-name {
         font-size: 2rem;
@@ -1079,6 +1085,42 @@ body {
 
     .legends-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION PREFERENCES
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .section {
+        animation: none;
+    }
+
+    :target .content-box {
+        animation: none;
+    }
+
+    .team-card,
+    .legend-card {
+        transition: none;
+    }
+
+    .main-nav a,
+    .main-nav a::after {
+        transition: none;
+    }
+
+    .content-box,
+    .legend-card,
+    .team-card,
+    .stat {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 }
 
