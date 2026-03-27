@@ -14,7 +14,7 @@ on:
     types: [created]
 
 concurrency:
-  group: pages-deploy
+  group: pages-deploy-${{ github.event.pull_request.number || github.event.issue.number || github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -101,7 +101,7 @@ jobs:
     if: >
       github.event_name == 'issue_comment' &&
       github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/restore')
+      github.event.comment.body == '/restore'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -147,7 +147,7 @@ jobs:
     if: >
       github.event_name == 'issue_comment' &&
       github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/preview')
+      github.event.comment.body == '/preview'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
